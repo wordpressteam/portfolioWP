@@ -24,6 +24,9 @@ function theme_setup() {
 	register_nav_menus( array(
 		'primary' => 'Primary Navigation'
 	) );
+	register_nav_menus( array(
+		'social' => 'Social Contact'
+	) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -163,6 +166,33 @@ function hackeryou_widgets_init() {
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => 'Hours',
+		'id' => 'hours',
+		'description' => 'The custom hours area',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	) );
+	register_sidebar( array(
+		'name' => 'Contact',
+		'id' => 'contact',
+		'description' => 'The custom contact area',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	) );
+	register_sidebar( array(
+		'name' => 'main-h2-tagline',
+		'id' => 'tagline',
+		'description' => 'The custom tagline area',
+		'before_widget' => '<div class = "h2-wrapper">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>'
 	) );
 
 }
