@@ -211,10 +211,13 @@ section.feature-link{
 		font-weight: 300;
 
 	}
-	button{
+	.feature-post-button{
 		margin-top: 2%;
 		margin-left: 10%;
+		display: inline-block;
 		width: 15%;
+		text-decoration: none;
+		text-align: center;
 		outline: none;
 		border:none;
 		background: $color01;
@@ -316,20 +319,29 @@ section.menu-link{
 				font-size: 14px;
 				line-height: 21px;
 				@include flex;
-				justify-content: space-between;
+				justify-content:space-between;
+
 				span{
-					display: inline-block;
+					display: block;
 					padding:1%;
+					font-weight: 300;
+					font-size: 15px;
 				}
-				span.dots{
-					width: 100%;
-					height:1.5em;
-					border-bottom: 1px dotted $color03;
-				}
+				
 				span.price{
 					color:$color02;
 					font-weight: 400;
+					
 				}
+
+			}
+			p.description{
+				// color:$color02;
+				font-weight: 100;
+				font-size: 14px;
+				font-family: $font04;
+				width: 90%;
+				padding-left:2%;
 			}
 			// background: $color08;
 		}
@@ -438,6 +450,49 @@ footer.main-footer{
 }
 
 
+//feature page styles
 
+section.features{
+	@include flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	background-color: $color02;
+	color:$color03;
+	padding-bottom: 5%;
+	.feature-item{
+		width: 60%;
+		margin-top: 5%;
+		// margin-bottom: 3%;
+	}
+	.feature-post-h3{
+		font-size: 30px;
+		font-family: $font01;
+	}
+	.feature-post{
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
 
+//about section style
 
+section.about{
+	@include flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	justify-content: center;
+	background-color: $color02;
+		height: 100%;
+		min-height: 65%;
+	.about-para{
+		color:$color03;
+		font-size: 16px;
+		line-height: 24px;
+		width: 60%;
+
+	}
+}
