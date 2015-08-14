@@ -14,6 +14,23 @@
 
 
   	</div>
+    <div class="footerDiv social">
+      <h3>Social</h3>
+      <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_location' => 'social',
+          'echo'            => true,
+          'before'          => '<p>',
+          'after'           => '</p>',
+          'link_before'     => '<p>',
+          'link_after'      => '</p>'
+        // 'container_class' => 'main-nav'
+      )); ?>
+    <!--  <p><a href=""><i class="fa fa-facebook"></i></a></p>
+      <p><a href=""><i class="fa fa-twitter"></i></a></p>
+      <p><a href=""><i class="fa fa-google-plus"></i></a></p>
+      <p><a href=""><i class="fa fa-instagram"></i></a></p> -->
+    </div>
   	<div class="footerDiv contact">
   		<h3>contact us</h3>
  		 <?php  dynamic_sidebar( 'contact' ); ?>
@@ -24,23 +41,7 @@
   		<h4>Phone</h4>
   		<p class = "phone"> 416.123.4567</p> -->
   	</div>
-  	<div class="footerDiv social">
-  		<h3>Social</h3>
-  		<?php wp_nav_menu( array(
-  		  'container' => false,
-  		  'theme_location' => 'social',
-  		  	'echo'            => true,
-  		  	'before'          => '<p>',
-  		  	'after'           => '</p>',
-  		  	'link_before'     => '<p>',
-  		  	'link_after'      => '</p>'
-  		  // 'container_class' => 'main-nav'
-  		)); ?>
-  	<!-- 	<p><a href=""><i class="fa fa-facebook"></i></a></p>
-  		<p><a href=""><i class="fa fa-twitter"></i></a></p>
-  		<p><a href=""><i class="fa fa-google-plus"></i></a></p>
-  		<p><a href=""><i class="fa fa-instagram"></i></a></p> -->
-  	</div>
+ 
   </div>
   <div class="copyright"> 
   <p>Copyright &copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>
