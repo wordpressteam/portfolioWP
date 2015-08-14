@@ -107,6 +107,7 @@ nav.main-nav{
 		font-weight: 600;
 		width: 60%;
 		color: $color04;
+
 	}
 	ul{
 		margin:0;
@@ -156,6 +157,7 @@ header.main-header{
 		text-transform: uppercase;
 		a{
 			color: $color04;
+			text-decoration: none;
 		}
 		span{
 			color: $color02;
@@ -406,11 +408,14 @@ footer.main-footer{
 		}
 		
 	}
+	.social h3{
+		margin-bottom: 50%;
+	}
 	ul#menu-social{
 		margin:0;
 		padding:0;
-		margin-top: 12%;
-		width: 200px;
+		margin-top: 16%;
+		width: 150px;
 		@include flex;
 		-webkit-flex-direction: row;
 		flex-direction: row;
@@ -421,7 +426,7 @@ footer.main-footer{
 			width: 50%;
 			position: relative;
 			font-size: 25px;
-			padding: 10%;
+			// margin-top: 5%;
 			padding-left:0;
 		}
 		li p:nth-child(2){
@@ -434,6 +439,36 @@ footer.main-footer{
 			top:0;
 			bottom:0;
 			right:0;
+			// background: red;
+			// z-index:0;
+		}
+		.fa:before{
+			color: $color02;
+			background: $color01;
+			
+		}
+		.fa-facebook:before{
+			padding: 20% 30%;
+			border-radius: 10px 0 0 0;
+		}
+		.fa-twitter:before{
+			padding: 18.5% 24%;
+			border-radius: 0 10px 0 0;
+
+		}
+		.fa-instagram:before{
+			padding: 20% 26%;
+			position: relative;
+			top:40px;
+			border-radius: 0 0 10px 0;
+
+		}
+		.fa-google-plus:before{
+			padding: 20% 25%;
+			position: relative;
+			top:40px;
+			border-radius: 0 0 0 10px;
+
 		}
 	}
 	.copyright{
@@ -494,5 +529,56 @@ section.about{
 		line-height: 24px;
 		width: 60%;
 
+	}
+}
+
+
+//404 page style
+
+section.page_not_found{
+	// background-color: red;
+	background-image: url(images/404image.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	height:100%;
+	min-height:65%;
+	padding-top:0.1px;
+	.page-wrapper{
+		// @include flex;
+		// -webkit-flex-direction: column;
+		// flex-direction: column;
+		margin: 18% 10%;
+		width: 25%;
+		h2{
+			font-size: 80px;
+			font-family: $font01;
+			color:$color04;
+			text-align: center;
+			// margin-bottom: 10%;
+		}
+		p{
+			font-size: 18px;
+			line-height: 27px;
+			font-family: $font04;
+			color:$color01;
+			margin-top: 30%;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		a{
+			display: inline-block;
+			width: 50%;
+			margin-left: 25%;
+			margin-top: 20%;
+			text-align: center;
+			text-decoration: none;
+			font-size: 16px;
+			line-height: 24px;
+			color:$color02;
+			background: $color01;
+			padding:2% 3%;
+			font-weight: 300;
+			font-family: $font04;
+		}
 	}
 }
