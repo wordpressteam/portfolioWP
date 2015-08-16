@@ -19,7 +19,7 @@
   <div class="page-wrapper">
 
     <h2>404</h2>
-    <p>Page Not Found. <br>Looks like you're lost.</p>
+    <p>Sorry, We Dont Serve Food Here <br>Looks like you're lost.</p>
     <!-- <p></p> -->
     <?php //get_search_form(); ?>
 	<a href=" <?php echo home_url() ?> ">Take Me Home</a>
