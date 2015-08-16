@@ -1,4 +1,4 @@
-<footer class = "main-footer">
+<footer  id = "contactscroll" class = "main-footer">
   <!-- <div class="container">
     <p>&copy; HackerYou <?php echo date('Y'); ?></p>
   </div> -->
@@ -45,7 +45,7 @@
   </div>
   <div class="copyright"> 
   <p>Copyright &copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>
-  <p>Built by Adeel Mela & Ivy Wang. Powered by WordPress</p>
+  <p>Template Built by Ivy Wang. Powered by WordPress</p>
   </div>
 </footer>
 

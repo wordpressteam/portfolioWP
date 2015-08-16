@@ -10,24 +10,45 @@
 get_header(); ?>
 <section class="feature-link">
 	<?php
-	 global $post;
-	 $myposts = get_posts('numberposts=1&categoryname=feature');
-	 foreach($myposts as $post) :
-	 ?>
-	<h3 class = "feature-post-h3"><a href="#"> <?php echo $post->post_title; ?> </a></h3>
-	<p class = "post feature-post"> <?php echo $post->post_content; ?> </p>
-	<?php endforeach; ?>
-	<?php wp_reset_postdata(); ?>
+	 // global $post;
+	 // $myposts = get_posts('numberposts=1&categoryname=feature');
+	 // foreach($myposts as $post) :
+	$postQuery = new WP_Query(array(
+		'post_type' => 'post',
+		'posts_per_page' => 1,
+		'category_name' => 'feature'
+	));
+	if($postQuery->have_posts()) {
+		while($postQuery->have_posts()) {
+			$postQuery->the_post();
+			?>
+	
+	<h3 class = "feature-post-h3"> <?php the_title(); ?></h3>
+	<?php the_content(); ?>
+	<ul class = "tast-menu">
+	<?php while( has_sub_field('tast_menu_type') ): ?>
+	  	<li class = "tast-menu-item">
+	  		<p class = "tasting_menu"><?php the_sub_field('tast_menu_name'); ?> . <?php the_sub_field('tast_menu_price'); ?></p>
+	  		
+	  	</li>
+	  	<?php endwhile; ?>
+	  	<!-- <?php //wp_reset_postdata(); ?> -->
+	</ul>
+	<?php 
+
+		}
+		} 
+ wp_reset_postdata(); ?>
 	<!-- <button class = "feature-post-button">More Features</button> -->
 	<a href="<?php echo get_page_link(14); ?>" class = "feature-post-button">More Features</a>
 	
 </section>
 <section class="about-link">
 	<h3 class = "about-story-h3"><a href="<?php echo get_page_link(10); ?>">Our Story</a></h3>
-	<p class = "about-story-tag">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, voluptas! </p>
+	<p class = "about-story-tag"><?php the_field(about_tag); ?> </p>
 </section>
 
-<section class="main menu-link">
+<section id = "menuscroll" class="main menu-link">
 	<h3> Menu </h3>
   <!-- <div class="container"> -->
 	<ul class = "menu-list">
@@ -44,6 +65,8 @@ get_header(); ?>
 		  	</li>
 
 		<?php endwhile; ?>
+	<?php wp_reset_postdata(); ?>
+
 	</ul>
    <!--  <ul class="content menu-list">
     		<?php //get_template_part( 'loop', 'index' );	?>

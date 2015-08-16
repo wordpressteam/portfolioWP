@@ -186,6 +186,15 @@ function hackeryou_widgets_init() {
 		'after_title' => '</h4>'
 	) );
 	register_sidebar( array(
+		'name' => 'testing',
+		'id' => 'testing',
+		'description' => 'The custom contact area',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	) );
+	register_sidebar( array(
 		'name' => 'main-h2-tagline',
 		'id' => 'tagline',
 		'description' => 'The custom tagline area',
