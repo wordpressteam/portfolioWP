@@ -101,6 +101,9 @@ nav.main-nav{
 	left:0;
 	width: 100%;
 	z-index:1000;
+	div.menu-bar{
+		display: none;
+	}
 	div.logo{
 		margin-left: 3%;
 		font-family: $font02;
@@ -136,6 +139,36 @@ nav.main-nav{
 	}
 	justify-content: space-between;
 } //end of main-nav
+
+@media (max-width: 500px){
+	nav.main-nav{
+		display: block;
+		div.logo{
+			// margin-left: 3%;
+			font-family: $font02;
+			font-size: 25px;
+			font-weight: 600;
+			width: 100%;
+			text-align: center;
+			color: $color04;
+
+		}
+		ul{
+			text-align: center;
+			width: 100%;
+			margin-top: 3%;
+		}
+		li{
+			text-align: center;
+		}
+
+	}
+	
+
+
+
+
+} //end of max width 500
 header.main-header{
 	height:100%;
 	padding-top:0.1px;
@@ -186,7 +219,20 @@ header.main-header{
 
 } //end of main-header
 
+@media (max-width: 500px){
+	header.main-header{
+		// display: block;
+		h1{
+			visibility: hidden;
+		}
 
+	}
+	
+
+
+
+
+} //end of max width 500
 
 
 section.feature-link{
@@ -257,7 +303,47 @@ section.feature-link{
 
 }
 
+@media (max-width: 500px){
+	section.feature-link{
+		// display: block;
+		h3{
+			margin-left: 10%;
+			font-size: 28px;
+			width: 80%;
+			margin-bottom: 1%;
+			margin-top: 10%;
+		}
+		p{
+			margin-left: 10%;
+			width: 80%;
+			font-size: 14px;
+			line-height: 20px;
 
+		}
+		.feature-post-button{
+			width: 50%;
+			padding: 3% 0;
+		}
+		.tast-menu-item{
+			list-style: none;
+			margin-top: 0;
+			margin-bottom: 18px;
+			p{
+			font-family: $font02;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 14px;
+			margin:0;
+		}
+		}
+
+	}
+	
+
+
+
+
+} //end of max width 500
 section.about-link{
 	height:100%;
 	min-height:65%;
@@ -304,6 +390,14 @@ section.about-link{
 	}
 }
 
+@media (max-width: 500px){
+	section.about-link{
+		p{
+			width: 80%;
+		}
+	}
+
+}
 
 
 
@@ -411,7 +505,21 @@ section.menu-link{
 	}
 }
 
+@media (max-width: 500px){
+	section.menu-link{
+		h3{
+		text-align: center;
+		padding-top: 15%;
+		margin-bottom: 5%;
+	}
+		.menu-list li{
+			width: 80%;
+			margin-left: 10%;
 
+		}
+	}
+
+}
 footer.main-footer{
 	height: 100%;
 	min-height: 65%;
@@ -579,7 +687,25 @@ footer.main-footer{
 		padding:1%;
 	}
 }
+@media (max-width: 500px){
+	footer.main-footer{
+		// height: 200%;
+		.footer-wrapper{
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		// margin-left: 10%;
+		text-align: center;
+	}
+	.social h3{
+		margin-bottom: 20%;
+	}
+	ul#menu-social{
+		margin:0 auto;
+		margin-bottom: 20%;
+	}
+}
 
+}
 
 //feature page styles
 
@@ -644,7 +770,42 @@ section.features{
 
 }
 
+@media (max-width: 500px){
+	section.features{
+		// height: 200%;
+		p{
+		font-size: 14px;
+		line-height: 20px;
+		
+	}
+	.feature-item{
+		width: 80%;
+		margin-top: 5%;
+		// margin-bottom: 3%;
+	}
+	.tast-menu-item{
+		
+		p{
+		
+		font-size: 14px;
+		line-height: 14px;
+		
+	}
+	}
+	.tags{
+		// margin-top: 5%;
+		span{
+			
+			// margin-right: 1%;
+			margin-bottom: 2%;
+			
+		}
+	}
+}
+
+}
 //about section style
+
 
 section.about{
 	@include flex;
@@ -837,7 +998,57 @@ section.about{
 	}
 }
 
+@media (max-width: 500px){
+	section.about{
+		// height: 200%;
+		.about-para{
+			
+			font-size: 14px;
+			line-height: 20px;
+			width: 80%;
+			margin: 4% auto;
+	}	
+	.chef p{
+		font-size: 14px;
+	
+	}
+	.chef, .bar, .space{
+		// margin-top: 5%;
+		h2{
+			// height:80%;
+			padding-top: 30%;
+			padding-bottom: 30%;
+			color: $color01;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-family: $font03;
+		} 
+		p{
+			width: 80%;
+			margin: 4% auto;
+			font-size: 14px;
+			line-height: 20px;
+		
+		}
+		p:nth-child(3){
+			font-size: 10px;
+			line-height: 15px;
+		
 
+
+		}
+		p:last-child{
+			font-size: 10px;
+			line-height: 15px;
+			// font-style: italic;
+			text-align: right;
+			padding-right: 3%;
+			text-transform: uppercase;
+		}
+	}
+
+}
+}
 //404 page style
 
 section.page_not_found{
@@ -888,6 +1099,16 @@ section.page_not_found{
 	}
 }
 
+@media (max-width: 500px){
+	section.page_not_found{
+		.page-wrapper{
+			width: 60%;
+			margin: 35% 25%;
+		}
+
+	}
+
+}
 
 //feature and about header
 
@@ -950,7 +1171,20 @@ section.about-header{
 	// min-height:65%;
 }
 
+@media (max-width: 500px){
+	section.feature-header{
+		h2{
+			width: 55%;
+		}
 
+	}
+	section.about-header{
+		h2{
+			width: 40%;
+		}
+	}
+
+}
 .copyright{
 		width: 100%;
 		text-align: center;

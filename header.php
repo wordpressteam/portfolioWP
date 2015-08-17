@@ -29,6 +29,10 @@
      <?php  dynamic_sidebar( 'tagline' ); ?>
     <nav class="main-nav">
       <div class="logo"><?php bloginfo( 'name' ); ?></div>
+      <!-- <div class="menu-bar">
+      <label for="bar"><i class="fa fa-bars"></i></label>
+      <input type="checkbox" class="toggle" id="bar">
+      </div> -->
     
     <?php wp_nav_menu( array(
       'container' => 'ul',
